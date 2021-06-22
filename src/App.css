@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000000;
+}
+.topnav {
+  background: #ffc600;
+}
+.top-nav {
+  background: black;
+  align-items: center;
+  min-height: 30px;
+  border-top: 5px solid #ffc600;
+}
+.topper {
+  display: flex;
+  /* justify-content: space-between; */
+  margin: auto;
+}
+.topper > a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.my-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 73px;
+}
+.links {
+  display: flex;
+}
+.links li:not(:last-child) {
+  margin-right: 30px;
+}
+.links > .nav-links:not(:last-child) {
+  margin-right: 50px;
+}
+.links > .nav-links > li {
+  list-style: none;
+  padding: 9px 18px;
+  color: #050708;
+  font-weight: 700;
+  font-size: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.top-line {
+  height: 20px;
+  width: 100%;
+}
+.table {
+  margin-top: 80px;
+}
+.table > h1 {
+  text-align: center;
+  background: #ffc600;
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  font-size: 35px;
+}
+.table > h2 {
+  text-align: center;
+  background: #ffc600;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  padding: 5px 100px 5px 100px;
+  font-size: 35px;
+}
+.table-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  background: #282828;
+  padding: 10px;
+  border: 1px solid #ffc600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.ctext {
+  display: table-cell;
+  vertical-align: middle;
+  text-transform: capitalize;
+  font-size: 27px;
+  color: white;
+  margin-left: 40px;
+}
+.dr {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.dr > ul > li {
+  font-size: 35px;
+  line-height: 40px;
+  margin: 20px 0;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.c2-container {
+  background: #fef8d4;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.c2-container > button {
+  margin: 10px 30px 20px 40px;
+  border-radius: 3px;
+  border: none;
+  padding: 7px;
+  box-shadow: 2px 2px 4px grey;
+  width: fit-content;
+}
+.table-content > div > .name {
+  color: #fdf7d3;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.table-content > div > .founder {
+  color: #f9cc22;
+  height: 45px;
+  font-size: 17px;
+}
+.table-content > div > .desc {
+  color: #f1f1f1;
+  margin-top: 30px;
+  font-size: 15px;
+  text-align: justify;
+  text-transform: capitalize;
+  /* height: 90px; */
+  /* overflow: hidden; */
+}
+.btn {
+  border: none;
+  background: #f9cc22;
+  border-radius: 20px;
+}
+.table-content > div {
+  padding: 10px 30px 10px 30px;
+}
+.my-flex {
+  display: flex;
+}
+.co-img {
+  width: 20px;
+  height: 100px;
+}
+.sati {
+  background: white;
+  padding: 10px;
+  padding-bottom: 40px;
+  margin-top: 80px;
+}
+.about-title {
+  font-weight: 400;
+  color: #f9cc22;
+  text-align: center;
+}
+.about-list {
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 10px;
+  color: white;
+  list-style-type: none;
+}
+ul li::before {
+  content: "";
+  border-color: transparent #ffc500;
+  border-style: solid;
+  border-width: 4px 0 4px 10px;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -30px;
+  top: 17px;
+  position: relative;
+}
+.contact-title {
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+.my-hr {
+  width: 100px;
+  height: 3px;
+  background-color: #ffc600;
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+.whats {
+  position: fixed;
+  right: 10px;
+  bottom: 80px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.form > input {
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .ctext {
+    font-size: 15px;
+  }
+  .dr > ul > li {
+    font-size: 15px;
+  }
+}
