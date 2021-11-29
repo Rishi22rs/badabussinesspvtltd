@@ -59,10 +59,10 @@ const data = [
 
 const IBC = () => {
   return (
-    <div>
+    <div style={{background:'black'}}>
       <TopNav />
       <Poster pic={IBCPoster} />
-      <div className="container">
+      <div className="container" >
         <TableHolder data={data} title="IBC BENEFITS" />
       </div>
       <Footer />

@@ -12,12 +12,6 @@ const Footer = () => {
             <h5 className="text-uppercase" style={{ color: "white" }}>
               Join Us
             </h5>
-            {/* <div className="form">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email" />
-              <input type="text" name="phone" placeholder="Contact Number" />
-              <button className="btn">Submit</button>
-            </div> */}
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdzCFzjC4HBWn_q5fpeAAk4Xt66N9Q5s9adKmxEFwiiVHfxoA/viewform?embedded=true"
               width="100%"
@@ -29,6 +23,15 @@ const Footer = () => {
             >
               Loading…
             </iframe>
+            {/* <div className="d-flex">
+              <form action="mailto:rishisrivastava22rs@gmail.com" method="POST" enctype="multipart/form-data" className="form p-5" style={{background:'#FEFAED'}}>
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="text" name="phone" placeholder="Contact Number" required/>
+                <input type="text" name="city" placeholder="City" required/>
+                <button type="submit" className="btn">Submit</button>
+              </form>
+            </div> */}
           </div>
           <hr className="clearfix w-100 d-md-none pb-3" />
           <div className="col-md-3 mb-md-0 mb-3">

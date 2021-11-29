@@ -1,15 +1,18 @@
-import React, { Profiler } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import App from "./App";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import IBC from "./Pages/IBC";
 
+
 import whatsapp from "./assets/whatsapp.png";
 
-const Navigation = () => (
+const Navigation = () => {
+  
+  return(
   <div>
-    <div>
+    <div style={{zIndex:90}}>
       <p className="whats">Hello, how can we help you?</p>
       <img
         onClick={() =>
@@ -30,7 +33,7 @@ const Navigation = () => (
         <Route path={`/contact`} exact component={Contact} />
       </Switch>
     </Router>
-  </div>
-);
+  </div>)
+}
 
 export default Navigation;

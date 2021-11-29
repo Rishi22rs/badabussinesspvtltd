@@ -7,23 +7,6 @@ import { Link } from "react-router-dom";
 const TopNav = () => {
   return (
     <div>
-      <div className="topnav">
-        <div className="top-nav">
-          <div className="container">
-            <div className="row d-flex justify-content-center topper">
-              <a href="tel:+91-7007912931" className="col-md-3">
-                Sales: +91-7007912931
-              </a>
-              <a href="tel:+91-8299093967" className="col-md-3">
-                Sales: +91-8299093967
-              </a>
-              <a href="mailto:ebs@badabussinesspvtltd.com" className="col-md-3">
-                Sales: ebs@badabussinesspvtltd.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
       <Navbar collapseOnSelect expand="lg" className="topnav">
         <div className="container">
           <Navbar.Brand href="#home">

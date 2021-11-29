@@ -7,7 +7,7 @@ import about from "../assets/about.jpg";
 
 const About = () => {
   return (
-    <div>
+    <div style={{background:'black'}}>
       <TopNav />
       <Poster pic={about} />
       <div className="container">

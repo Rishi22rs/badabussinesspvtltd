@@ -7,7 +7,7 @@ import contact_us from "../assets/contact_us.jpg";
 
 const Contact = () => {
   return (
-    <div>
+    <div style={{background:'black'}}>
       <TopNav />
       <Poster pic={contact_us} />
       <div className="container" style={{ padding: "40px" }}>

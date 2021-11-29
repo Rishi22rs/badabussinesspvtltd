@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
+import "./mycss.css";
 import TopNav from "./components/TopNav";
 import MyCarousel from "./components/MyCarousel";
 
@@ -8,6 +9,11 @@ import drpic from "./assets/drpic.png";
 import drvpic from "./assets/drvpic.png";
 import ent from "./assets/ent.png";
 import stu from "./assets/stu.png";
+
+import b1 from './assets/b1.png'
+import b2 from './assets/b2.png'
+import b3 from './assets/b3.png'
+import b4 from './assets/b4.png'
 
 import comp1 from "./assets/comp01.png";
 import comp2 from "./assets/comp02.png";
@@ -85,6 +91,8 @@ import Card3 from "./components/Card3";
 import InfiniteCarousel from "react-leaf-carousel";
 import Footer from "./components/Footer";
 
+import jw from "./assets/jw.jpg";
+
 import c1p1 from "./assets/c1p1.png";
 import c1p2 from "./assets/c1p2.png";
 import c1p3 from "./assets/c1p3.png";
@@ -141,6 +149,15 @@ import p45 from "./assets/2817.png";
 import p46 from "./assets/2818.png";
 import p47 from "./assets/2819.png";
 
+import what from './assets/what_BCP.png'
+import Cards from "./components2/Cards";
+import Title from "./components2/Title";
+import Cards2 from "./components2/Cards2";
+import Cards3 from "./components2/Cards3";
+
+import ReactCircleModal from 'react-circle-modal'
+import { Link } from "react-router-dom";
+
 const data0 = [
   {
     pic: c1p1,
@@ -172,7 +189,16 @@ const data0 = [
   },
 ];
 
+
 function App() {
+
+  const [isOpen,setIsOpen]=useState(false)
+  const ref=useRef()
+
+  useEffect(()=>{
+    setTimeout(()=>ref.current.click(),1000)
+  },[])
+
   const data = [
     {
       pic: c2p1,
@@ -560,12 +586,74 @@ function App() {
     comp56,
     comp57,
   ];
+
+  const MyModal=({style={},className="",children})=>{
+    return(
+    <ReactCircleModal
+        backgroundColor="rgba(0, 0, 0, .7)"
+        toogleComponent={onClick => (
+          <button className={className} style={style} ref={ref} onClick={onClick}>{children}</button>
+        )}
+      // Optional fields and their default values
+      offsetX={window.innerWidth/2}
+      offsetY={window.innerHeight/2}
+      >
+        {(onClick) => (
+            <div className="d-flex justify-content-center align-items-center">
+              {/* <form className="form p-5" style={{background:'#FEFAED'}}>
+                <button className="btn" style={{position:'relative',top:-40,left:200, width:30,fontWeight:"bolder"}} onClick={onClick}>X</button>
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="text" name="phone" placeholder="Contact Number" required/>
+                <input type="text" name="city" placeholder="City" required/>
+                <button type="submit" className="btn">Submit</button>
+              </form> */}
+              <button className="btn" style={{position:'relative',top:-470,left:'80%', width:30,fontWeight:"bolder"}} onClick={onClick}>X</button>
+              <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdzCFzjC4HBWn_q5fpeAAk4Xt66N9Q5s9adKmxEFwiiVHfxoA/viewform?embedded=true"
+              width="100%"
+              style={{ overflow: "hidden" }}
+              height="1000px"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+          // </div>
+        )}
+      </ReactCircleModal>
+      )
+  }  
+
   return (
     <>
       <TopNav />
       <MyCarousel />
-      <div className="container">
-        <img className="img-fluid my-img" src={full1} alt="full1" />
+      <div style={{background:"#FEFAED"}}>
+        <div className="container d-flex justify-content-center">
+          <div>
+            <Title underline="WHAT" content="IS BUSINESS COACHING PROGRAM?"/>
+            <div className="row align-items-center">
+              <img className="col-md-6" src={what} alt="what"/>
+              <div className="col-md-6">
+                <p className="what-para mt-4">
+                  Business Coaching Programs are specially designed courses to give holistic view of business operations that will enable you to build high-performing business frameworks, curate powerful strategies that will drive innovation and boost profitable growth with the hand-holding support of a personalized Business Coach.
+                </p>
+                <MyModal className="my-btn-new">Join Our Program</MyModal>
+              </div>
+            </div>
+            <p className="benefits">Benefits with Business Coaching Program</p>
+            <div className="row d-flex justify-content-center  align-items-center"> 
+              <Cards src={b1} content="Personalized Business Coach"/>
+              <Cards src={b2} content="250+ exclusive video tutorials & case studies"/>
+              <Cards src={b3} content="Live Sessions with Dr. Vivek Bindra"/>
+              <Cards src={b4} content="Effective Structured Business Programs"/>
+            </div>
+          </div>
+        </div>
+        {/* <img className="img-fluid my-img" src={full1} alt="full1" />
         <TableHolder data={data0} />
         <div className="dr">
           <img src={drpic} alt="drpic" />
@@ -669,7 +757,78 @@ function App() {
               <img className="co-img" alt="" src={x} />
             </div>
           ))}
+        </InfiniteCarousel> */}
+      </div>
+      <div style={{background:"white"}}>
+        <div className="container d-flex justify-content-center">
+          <div>
+            <Title underline="WHY" content="BUSINESS COACHING PROGRAM?"/>
+            <div className="row d-flex justify-content-center  align-items-cente">
+              <Cards2 MyModal={MyModal} />
+              <Cards2 MyModal={MyModal} />
+              <Cards2 MyModal={MyModal} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{background:"black"}}>
+        <div className="container d-flex justify-content-center">
+          <div>
+            <h3 className="text-center mb-5 p-2" style={{background:"#F9CC22",maxWidth:500,margin:"auto"}}>WHO WILL TEACH YOU</h3>
+            <div className="table-content" style={{ background: "none" }}>
+              <img src={drvpic} alt="drvpic" />
+              <div>
+                <p className="name">Dr. Vivek Bindra</p>
+                <p className="founder mb-3">Founder & CEO - Bada Business</p>
+                <p className="desc">
+                  Dr Vivek Bindra Is A Revolutionary Entrepreneur, An
+                  Internationally Acclaimed Motivational Speaker And A Business
+                  Coach. A Trusted Advisor For More Than 500+ Corporate Houses And
+                  Entrepreneurs, He Is The Recipient Of More Than 100 Globally
+                  Admired Awards.
+                </p>
+                <Link to="/about"><button className="btn">Read More</button></Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container mt-3" style={{background:"black"}}>
+        <InfiniteCarousel
+          arrows={true}
+          autoCycle={true}
+          pauseOnHover={false}
+          breakpoints={[
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ]}
+          dots={false}
+          showSides={true}
+          sidesOpacity={0.5}
+          sideSize={0.1}
+          slidesToScroll={1}
+          slidesToShow={5}
+          scrollOnDevice={true}
+        >
+          {data2.map((x, key) => (
+              <Cards3 key={key} src={x.pic} name={x.name} prof={x.pos}/>
+          ))}
         </InfiniteCarousel>
+      </div>
+      </div>
+      <div style={{background:'black'}}>
+        <img src={jw} alt="img" className="img-fluid"/>
       </div>
       <Footer />
     </>

@@ -3,10 +3,13 @@
   padding: 0;
 }
 body {
-  background: #000000;
+  background: #FEFAED;
 }
 .topnav {
   background: #ffc600;
+}
+.coro{
+  margin-top: -8px;
 }
 .top-nav {
   background: black;
@@ -136,7 +139,7 @@ body {
 }
 .table-content > div > .desc {
   color: #f1f1f1;
-  margin-top: 30px;
+  margin-top: -10px;
   font-size: 15px;
   text-align: justify;
   text-transform: capitalize;
@@ -224,7 +227,7 @@ ul li::before {
 .form > input {
   margin-bottom: 20px;
   border-radius: 3px;
-  border: none;
+  border: 1px solid black;
   padding: 3px;
   outline: none;
 }
